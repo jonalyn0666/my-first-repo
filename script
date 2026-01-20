@@ -1,0 +1,16 @@
+function toggleAbout() {
+    const box = document.getElementById("aboutBox");
+    const intro = document.getElementById("introSection");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+        intro.style.display = "block";   // balik intro
+    } else {
+        box.style.display = "block";
+        intro.style.display = "none";    // tago intro
+
+        // show menu (4 circles)
+        document.getElementById("menuView").style.display = "flex";
+        document.querySelectorAll(".detail-view").forEach(v => v.style.display = "none");
+    }
+}

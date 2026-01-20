@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jonalyn Jabat</title>
+
+    <!-- MOBILE & OTHER DEVICE SUPPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jonalyn Jabat</h1>
+</header>
+
+<div class="container">
+
+    <div class="left" id="leftSection">
+        <div class="profile-pic">
+            <!-- FIXED IMAGE NAME (NO SPACE) -->
+            <img src="my-picture.jpg" alt="Profile Picture">
+        </div>
+        <button onclick="toggleAbout()">Know Me Better</button>
+    </div>
+
+    <div class="right">
+
+        <div id="introSection">
+            <div class="intro-box">
+                <h2>Hello, I am Jonalyn</h2>
+                <p>
+                    I am a passionate and motivated Computer Engineering student with a strong desire to learn and improve.
+                    I enjoy working on hands-on projects, adapting to new tools, and developing skills that help me grow as a future engineer.
+                </p>
+            </div>
+        </div>
+
+        <section class="about-box" id="aboutBox">
+
+            <div class="about-header">
+                <h3>About Me</h3>
+                <button onclick="toggleAbout()">Close</button>
+            </div>
+
+            <div class="about-body" id="menuView">
+
+                <div class="option" onclick="showSection('personalView')">
+                    <div class="circle">
+                        <img src="personal.jpg" alt="Personal Information">
+                    </div>
+                    <p>Personal<br>Information</p>
+                </div>
+
+                <div class="option" onclick="showSection('educationView')">
+                    <div class="circle">
+                        <img src="education.jpg" alt="Education">
+                    </div>
+                    <p>Education /<br>Awards &<br>Recognition</p>
+                </div>
+
+                <div class="option" onclick="showSection('certView')">
+                    <div class="circle">
+                        <img src="web.jpg" alt="Seminars">
+                    </div>
+                    <p>Seminars /<br>Webinars /<br>Training</p>
+                </div>
+
+                <div class="option" onclick="showSection('skillsView')">
+                    <div class="circle">
+                        <img src="skills.jpg" alt="Skills">
+                    </div>
+                    <p>Skills &<br>Ability</p>
+                </div>
+
+            </div>
+
+            <!-- PERSONAL VIEW -->
+            <div class="about-body detail-view" id="personalView">
+                <div class="info-content">
+                    <h4>Basic Details</h4>
+
+                    <label>Full Name:</label>
+                    <input type="text" value="Jonalyn E. Jabat" readonly>
+
+                    <label>Nickname:</label>
+                    <input type="text" value="Daday" readonly>
+
+                    <label>Professional Title:</label>
+                    <input type="text" value="Computer Engineering Student" readonly>
+
+                    <label>Date of Birth:</label>
+                    <input type="text" value="Feb 06, 2003" readonly>
+
+                    <label>Age:</label>
+                    <input type="text" value="22 years old" readonly>
+
+                    <label>Gender:</label>
+                    <input type="text" value="Female" readonly>
+
+                    <label>Civil Status:</label>
+                    <input type="text" value="Single" readonly>
+
+                    <h4>Contact Information</h4>
+                    <label>Mobile Number:</label>
+                    <input type="text" value="09157328664" readonly>
+
+                    <label>Email:</label>
+                    <input type="text" value="jjabat@usa.edu.ph" readonly>
+
+                    <h4>Address</h4>
+                    <label>Address:</label>
+                    <input type="text" value="Brgy. Tabuc Suba, Jaro" readonly>
+
+                    <label>Municipality:</label>
+                    <input type="text" value="Iloilo City" readonly>
+
+                    <label>Province:</label>
+                    <input type="text" value="Iloilo" readonly>
+
+                    <label>Country:</label>
+                    <input type="text" value="Philippines" readonly>
+
+                    <label>ZIP Code:</label>
+                    <input type="text" value="5000" readonly>
+
+                    <button class="back-btn" onclick="backToMenu()">Back</button>
+                </div>
+            </div>
+
+            <!-- EDUCATION VIEW -->
+            <div class="about-body detail-view" id="educationView">
+                <div class="info-content">
+                    <h4>Education</h4>
+
+                    <input type="text" value="BS Computer Engineering – University of San Agustin (2022–Present)" readonly>
+                    <input type="text" value="Senior High School – Colegio De San Jose (2020–2022)" readonly>
+                    <input type="text" value="Junior High School – Colegio De San Jose (2016–2020)" readonly>
+                    <input type="text" value="Elementary – Jaro I Elementary School (2010–2016)" readonly>
+
+                    <button class="back-btn" onclick="backToMenu()">Back</button>
+                </div>
+            </div>
+
+            <!-- CERT VIEW -->
+            <div class="about-body detail-view" id="certView">
+                <div class="info-content">
+                    <h4>Seminars / Webinars / Training</h4>
+                    <p><b>BYTE 2025</b></p>
+                    <button class="back-btn" onclick="backToMenu()">Back</button>
+                </div>
+            </div>
+
+            <!-- SKILLS VIEW -->
+            <div class="about-body detail-view" id="skillsView">
+                <div class="info-content">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li>Basic web development (HTML & CSS)</li>
+                        <li>Teamwork and communication</li>
+                    </ul>
+
+                    <button class="back-btn" onclick="backToMenu()">Back</button>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<script>
+function toggleAbout() {
+    const box = document.getElementById("aboutBox");
+    const intro = document.getElementById("introSection");
+    const left = document.getElementById("leftSection");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+        intro.style.display = "block";
+        left.style.display = "block";
+    } else {
+        box.style.display = "block";
+        intro.style.display = "none";
+        left.style.display = "none";
+        backToMenu();
+    }
+}
+
+function showSection(id) {
+    document.getElementById("menuView").style.display = "none";
+    document.querySelectorAll(".detail-view").forEach(v => v.style.display = "none");
+    document.getElementById(id).style.display = "flex";
+}
+
+function backToMenu() {
+    document.getElementById("menuView").style.display = "flex";
+    document.querySelectorAll(".detail-view").forEach(v => v.style.display = "none");
+}
+</script>
+
+</body>
+</html>
