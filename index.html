@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Jonalyn Jabat</title>
-
-    <!-- MOBILE & OTHER DEVICE SUPPORT -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +15,6 @@
 
     <div class="left" id="leftSection">
         <div class="profile-pic">
-            <!-- FIXED IMAGE NAME (NO SPACE) -->
             <img src="my-picture.jpg" alt="Profile Picture">
         </div>
         <button onclick="toggleAbout()">Know Me Better</button>
@@ -27,15 +22,18 @@
 
     <div class="right">
 
-        <div id="introSection">
-            <div class="intro-box">
-                <h2>Hello, I am Jonalyn</h2>
-                <p>
-                    I am a passionate and motivated Computer Engineering student with a strong desire to learn and improve.
-                    I enjoy working on hands-on projects, adapting to new tools, and developing skills that help me grow as a future engineer.
-                </p>
-            </div>
-        </div>
+      <div id="introSection">
+
+    <div class="intro-box">
+        <h2>Hello, I am Jonalyn</h2>
+
+        <p>
+            I am a passionate and motivated Computer Engineering student with a strong desire to learn and improve.
+            I enjoy working on hands-on projects, adapting to new tools, and developing skills that help me grow as a future engineer.
+        </p>
+    </div>
+
+</div>
 
         <section class="about-box" id="aboutBox">
 
@@ -46,37 +44,36 @@
 
             <div class="about-body" id="menuView">
 
-                <div class="option" onclick="showSection('personalView')">
-                    <div class="circle">
-                        <img src="personal.jpg" alt="Personal Information">
-                    </div>
-                    <p>Personal<br>Information</p>
-                </div>
+    <div class="option" onclick="showSection('personalView')">
+        <div class="circle">
+            <img src="personal.jpg" alt="Personal Information">
+        </div>
+        <p>Personal<br>Information</p>
+    </div>
 
-                <div class="option" onclick="showSection('educationView')">
-                    <div class="circle">
-                        <img src="education.jpg" alt="Education">
-                    </div>
-                    <p>Education /<br>Awards &<br>Recognition</p>
-                </div>
+    <div class="option" onclick="showSection('educationView')">
+        <div class="circle">
+            <img src="education.jpg" alt="Education">
+        </div>
+        <p>Education /<br>Awards &<br>Recognition</p>
+    </div>
 
-                <div class="option" onclick="showSection('certView')">
-                    <div class="circle">
-                        <img src="web.jpg" alt="Seminars">
-                    </div>
-                    <p>Seminars /<br>Webinars /<br>Training</p>
-                </div>
+    <div class="option" onclick="showSection('certView')">
+        <div class="circle">
+            <img src="web.jpg" alt="Seminars">
+        </div>
+        <p>Seminars /<br>Webinars /<br>Training</p>
+    </div>
 
-                <div class="option" onclick="showSection('skillsView')">
-                    <div class="circle">
-                        <img src="skills.jpg" alt="Skills">
-                    </div>
-                    <p>Skills &<br>Ability</p>
-                </div>
+    <div class="option" onclick="showSection('skillsView')">
+        <div class="circle">
+            <img src="skills.jpg" alt="Skills">
+        </div>
+        <p>Skills &<br>Ability</p>
+    </div>
 
-            </div>
+</div>
 
-            <!-- PERSONAL VIEW -->
             <div class="about-body detail-view" id="personalView">
                 <div class="info-content">
                     <h4>Basic Details</h4>
@@ -129,9 +126,9 @@
                 </div>
             </div>
 
-            <!-- EDUCATION VIEW -->
             <div class="about-body detail-view" id="educationView">
                 <div class="info-content">
+
                     <h4>Education</h4>
 
                     <input type="text" value="BS Computer Engineering – University of San Agustin (2022–Present)" readonly>
@@ -139,36 +136,84 @@
                     <input type="text" value="Junior High School – Colegio De San Jose (2016–2020)" readonly>
                     <input type="text" value="Elementary – Jaro I Elementary School (2010–2016)" readonly>
 
+                    <h4>Awards & Recognition</h4>
+
+                    <p><b>College</b></p>
+                    <p>Academic Awardee & Leadership Awardee</p>
+                    <p><i>School Year 2023–2024</i></p>
+
+                    <p>Academic Awardee & Leadership Awardee</p>
+                    <p><i>School Year 2024–2025</i></p>
+
+                    <p><b>Senior High School</b></p>
+                    <p>With Honors Awardee & Loyalty Awardee</p>
+                    <p><i>School Year 2021–2022</i></p>
+
+                    <p>With Honors Awardee</p>
+                    <p><i>School Year 2020–2021</i></p>
+
+                    <p><b>Junior High School</b></p>
+                    <p>With Honors Awardee & Outstanding Science Club Member</p>
+                    <p><i>School Year 2019–2020</i></p>
+
+                    <p><b>Elementary</b></p>
+                    <p>Top 3</p>
+                    <p><i>School Year 2015–2016</i></p>
+
                     <button class="back-btn" onclick="backToMenu()">Back</button>
                 </div>
             </div>
 
-            <!-- CERT VIEW -->
             <div class="about-body detail-view" id="certView">
                 <div class="info-content">
                     <h4>Seminars / Webinars / Training</h4>
-                    <p><b>BYTE 2025</b></p>
+
+                    <p><b>BYTE 2025: Building Young Tech Experts for the Smarter Future</b></p>
+                    <p>National University Fairview – Quezon City (<i>May 2025</i>)</p>
+
+                    <p><b>AI at Work: Innovation Shaping Everyday Life</b></p>
+                    <p>University of Antique – Sibalom, Antique (<i>March 2025</i>)</p>
+
+                    <p><b>Introduction to C++</b> – Sololearn.com (<i>May 2025</i>)</p>
+                    <p><b>Introduction to C</b> – Sololearn.com (<i>September 2024</i>)</p>
+
+                    <p><b>Web3 for Dummies</b> – University of San Agustin (<i>May 2024</i>)</p>
+                    <p><b>NSTEP Visayas Webinar Series</b> – DOST (<i>October 2024</i>)</p>
+                    <p><b>AI Fundamentals with IBM SkillsBuild</b> – Cisco (<i>November 2024</i>)</p>
+                    <p><b>Internet of Things and Smart City</b> – ICpEP.se R6 (<i>May 2023</i>)</p>
+                    <p><b>Website Development for E-Portfolio</b> – USA (<i>September 2023</i>)</p>
+
                     <button class="back-btn" onclick="backToMenu()">Back</button>
                 </div>
             </div>
 
-            <!-- SKILLS VIEW -->
-            <div class="about-body detail-view" id="skillsView">
-                <div class="info-content">
-                    <h4>Skills</h4>
-                    <ul>
-                        <li>Basic web development (HTML & CSS)</li>
-                        <li>Teamwork and communication</li>
-                    </ul>
+<div class="about-body detail-view" id="skillsView">
+    <div class="info-content">
 
-                    <button class="back-btn" onclick="backToMenu()">Back</button>
-                </div>
-            </div>
+        <h4>Skills</h4>
+        <ul>
+            <li>Knows how to use Microsoft tools (Word, Excel, PowerPoint)</li>
+            <li>Basic coding knowledge</li>
+            <li>Basic web development skills using HTML and CSS</li>
+            <li>Works well with a team</li>
+            <li>Good at talking and communicating with people</li>
+            <li>Logical and critical thinking</li>
+            <li>Always finishes work on time</li>
+        </ul>
 
-        </section>
+        <h4>Ability</h4>
+        <ul>
+            <li>Time management and task prioritization</li>
+            <li>Adaptability to new tools and technologies</li>
+            <li>Attention to detail</li>
+            <li>Self-motivated and responsible</li>
+            <li>Willingness to learn and improve</li>
+        </ul>
 
+        <button class="back-btn" onclick="backToMenu()">Back</button>
     </div>
 </div>
+
 
 <script>
 function toggleAbout() {
